@@ -1,0 +1,19 @@
+name: Test workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Run workflow
+        run: |
+          sleep 15
+          echo "Running..."
+          sleep 15
+          echo "Success"
